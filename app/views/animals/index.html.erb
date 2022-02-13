@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Animals</h1>
+
+<div id="animals">
+  <% @animals = @animals.sort{|a,b| a.search_name <=> b.search_name} %>
+  <% @animals.each do |animal| %>
+    <%= render animal %>
+
+
+  <% end %>
+</div>
+
+<%= link_to "New animal", new_animal_path %>

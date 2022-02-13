@@ -1,0 +1,29 @@
+
+<div id="<%= dom_id @animal %>">
+  <h3>
+    <%= @animal.search_name %>
+  </h3> 
+
+
+  <p>
+    <% asset = "app/assets/images/#{@animal.image_name}.png" %>
+    <% if File.exist?(Rails.root + asset)%>
+      <%= image_tag ("/assets/#{@animal.image_name}.png") %>
+    <% else %>  
+        <img src=
+            <%= "https://7esl.com/wp-content/uploads/2020/12/#{@animal.image_name}-300x300.png"%>
+        >
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Habitat:</strong>
+    <%= @animal.habitat %>
+  </p>
+
+  <p>
+    <strong>Real:</strong>
+    <%= @animal.real %>
+  </p>
+
+</div>
