@@ -3,7 +3,7 @@ class CreateAnimals < ActiveRecord::Migration[7.0]
     create_table :animals do |t|
       t.text :search_name
       t.text :image_name
-      t.string :habitat
+      t.text :habitat
       t.text :real
       t.timestamps
     end

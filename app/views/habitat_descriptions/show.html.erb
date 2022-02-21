@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @habitat_description %>
+
+<div>
+  <%= link_to "Edit this habitat description", edit_habitat_description_path(@habitat_description) %> |
+  <%= link_to "Back to habitat descriptions", habitat_descriptions_path %>
+
+<br><br><br><br><br><br><br><br>
+  <%= button_to "Destroy this habitat description", @habitat_description, method: :delete %>
+</div>

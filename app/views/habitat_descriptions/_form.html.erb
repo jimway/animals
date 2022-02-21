@@ -1,0 +1,28 @@
+<%= form_with(model: habitat_description) do |form| %>
+  <% if habitat_description.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(habitat_description.errors.count, "error") %> prohibited this habitat_description from being saved:</h2>
+
+      <ul>
+        <% habitat_description.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :habitat_type, style: "display: block" %>
+    <%= form.text_field :habitat_type %>
+  </div>
+
+  <div>
+    <%= form.label :habitat_description, style: "display: block" %>
+    <%= form.text_area :habitat_description, cols:100, rows:10 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<p>From _form </p>  
+<% end %>

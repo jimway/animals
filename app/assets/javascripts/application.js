@@ -5,3 +5,6 @@
 //= require bootstrap
 
 //= require turbolinks
+
+import "trix"
+import "@rails/actiontext"
