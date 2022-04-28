@@ -7,10 +7,14 @@
 
   <p>
     <% asset = "app/assets/images/#{@animal.image_name}.png" %>
-    <% if File.exist?(Rails.root + asset)%>
+    <% potter_asset = "app/assets/images#{@animal.image_name}.png" %>
+
+    <% if File.exist?(Rails.root + asset) && @animal.habitat !='Harry Potter'%>
       <%= image_tag ("/assets/#{@animal.image_name}.png") %>
+    <% elsif File.exist?(Rails.root + potter_asset)%>
+      <%= image_tag ("#{@animal.image_name[1..-1]}.png") %>
     <% else %>  
-        <img src=
+        <img width=500px, height=500px src=
             <%= "https://7esl.com/wp-content/uploads/2020/12/#{@animal.image_name}-300x300.png"%>
         >
     <% end %>
