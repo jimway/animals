@@ -17,3 +17,27 @@
  *= require_tree .
  *= require_self
  */
+
+.body {
+   background-image: url("prairie-dog.jpeg");
+   background-repeat:  no-repeat;
+   opacity:  1.0;
+   background-size:  cover;
+}
+.animals {
+    background-color:  '#0f0' !important;
+    index:  1;
+    height:  100%;
+}
+
+div.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    background: rgba(225, 325, 625, .8);
+    width: 300px;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    font-size: 24px;
+}

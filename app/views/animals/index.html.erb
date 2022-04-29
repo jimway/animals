@@ -1,8 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<div class='body'>
 
 <h1>Animals</h1>
 
-<div id="animals">
+<div id="animals" class="scroll">
   <% @animals = @animals.sort{|a,b| a.search_name <=> b.search_name} %>
   <% @animals.each do |animal| %>
     <%= render animal %>
@@ -11,4 +11,4 @@
   <% end %>
 </div>
 
-<%= link_to "New animal", new_animal_path %>
+</div>

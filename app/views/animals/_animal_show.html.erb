@@ -4,6 +4,12 @@
     <%= @animal.search_name %>
   </h3> 
   <p>
+    <strong>Is this animal Real:</strong>
+    <%= @animal.real %> <br><br>
+    <strong>Habitat:</strong>
+    <%= @animal.habitat || "The real world" %>
+  </p>
+  <p>
     <% asset = "app/assets/images/real/#{@animal.image_name}.png" %>
     <% potter_asset = "app/assets/images#{@animal.image_name}.png" %>
 
@@ -20,17 +26,8 @@
   </p>
 
   <p>
-    <strong>Habitat:</strong>
-    <%= @animal.habitat || "The real world" %>
-  </p>
-  <p>
     <strong>Habitat Type:</strong>
     <%= @animal.habitat_type %>
-  </p>
-
-  <p>
-    <strong>Real:</strong>
-    <%= @animal.real %>
   </p>
 
 </div>
