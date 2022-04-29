@@ -3,11 +3,14 @@
 <%= render 'animals/animal_show', locals: {animal: @animal} %>
 
 <div>
-  <%= link_to "Edit this animal", edit_animal_path(@animal) %> |
+
   <%= link_to "Back to animals", animals_path %>
 
  
 </div>
 
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<%= link_to "Edit this animal", edit_animal_path(@animal) %> |
 <br><br><br><br><br><br><br><br>
  <%= button_to "Destroy this animal", @animal, method: :delete %>
