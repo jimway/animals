@@ -3,7 +3,15 @@ class AnimalsController < ApplicationController
 
   # GET /animals or /animals.json
   def index
+    @start = params[:q] || '?'
+    @start = @start.downcase
     @animals = Animal.all
+    @animals = @animals.sort{|a,b| a.search_name <=> b.search_name}
+    matcher = @start.gsub('?','')
+    if matcher.size > 0
+      @animals=@animals.select{|a| a.search_name.downcase.match matcher}
+    end
+    render 'index'
   end
 
   # GET /animals/1 or /animals/1.json

@@ -1,13 +1,19 @@
 <div class='body'>
 
-<h1>Animals</h1>
 
 <div id="animals" class="scroll">
-  <% @animals = @animals.sort{|a,b| a.search_name <=> b.search_name} %>
+  <% start = @start || 'bbb' %>
+  <div class='search'>
+    <%= form_tag("/animals", method: "get", id: 'search') do %>
+      <input type="text" name="q" id="q" value="<%=start%>" class='textbox', size="10">
+      <%= submit_tag("Search") %>"
+    <% end %>
+  </div>
+
   <% @animals.each do |animal| %>
-    <%= render animal %>
-
-
+    <div id="<%= dom_id animal %>">
+      <%= link_to "#{animal.search_name}", animal %>
+    </div>
   <% end %>
 </div>
 

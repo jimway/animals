@@ -41,3 +41,11 @@ div.scroll {
     text-align:justify;
     font-size: 24px;
 }
+
+div.search {
+    font-size:  48px;
+    background: rgba(225, 325, 625, .8);
+}
+.textbox {
+    font-size:  30px !important;
+}
