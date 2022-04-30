@@ -1,4 +1,6 @@
-///= require jquery
+
+
+//=require jquery
 
 //= require jquery_ujs
 
@@ -8,3 +10,6 @@
 
 import "trix"
 import "@rails/actiontext"
+
+
+import './add_jquery'

@@ -1,12 +1,16 @@
 <div class='body'>
+ <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
 
+<%= javascript_include_tag 'packs/my_js' %>
 
 <div id="animals" class="scroll">
   <% start = @start || 'bbb' %>
   <div class='search'>
     <%= form_tag("/animals", method: "get", id: 'search') do %>
       <input type="text" name="q" id="q" value="<%=start%>" class='textbox', size="10">
-      <%= submit_tag("Search") %>"
     <% end %>
   </div>
 

@@ -3,7 +3,7 @@ class AnimalsController < ApplicationController
 
   # GET /animals or /animals.json
   def index
-    @start = params[:q] || '?'
+    @start = params[:q] || ''
     @start = @start.downcase
     @animals = Animal.all
     @animals = @animals.sort{|a,b| a.search_name <=> b.search_name}
