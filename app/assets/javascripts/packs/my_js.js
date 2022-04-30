@@ -5,8 +5,10 @@ $(document).ready(function(){
   $("#q").val(old_val)
   $("#q").focus()
   $("#q").keyup(function(){
-    if (old_val !=  $("#q").val()) {
-  	  $("#search").submit();
+    val = $("#q").val()
+    console.log('new_val'+val)
+    if (old_val != val && val.length > 2)  {
+      $("#search").submit();
     };
   });
 });
